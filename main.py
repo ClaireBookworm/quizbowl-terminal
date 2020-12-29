@@ -28,7 +28,7 @@ for reader in [star, bio, phys, chem, math, cs, other]:
     reader.write("""<head>
         <style>
             body {
-                font-family: "Graphik"; 
+                font-family: "Avenir", "Avenir Next", -system-ui; 
                 margin: 5em;
                 font-size: 16px;
             }
@@ -41,7 +41,7 @@ def quiz(filename):
     data = json.load(f)
 
 
-    for datum in data['tossups']:
+    for datum in data['data']['tossups']:
         print(color.BOLD + datum['category']['name'] + " | " + datum['subcategory']['name'] + color.END + '\n')
         print(datum['text'])
         # for char in datum['text']:
